@@ -1,0 +1,35 @@
+
+.gallery-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    margin: auto;
+    max-width: 1460px;
+}
+
+.gallery-list .gallery-item {
+    position: relative;
+    min-width: 150px; /* Минимальная ширина */
+    max-width: 300px; /* Максимальная ширина */
+    height: auto; /* Высота может заполнять все доступное пространство */
+    overflow: hidden;
+}
+
+/* Стили для первого элемента, занимающего две строки и одну колонку */
+.gallery-list .gallery-item:first-child {
+    grid-row: span 2;
+}
+
+/* Стили для последующих блоков изображений */
+.gallery-list .block-two {
+    grid-row: span 2;
+}
+
+.gallery-list .block-three {
+    grid-row: span 3;
+}
+
+/* Стили для элементов в строке (второй, третий и т.д.) */
+.gallery-list .gallery-item:nth-child(n+2) {
+    grid-column: span 1;
+}

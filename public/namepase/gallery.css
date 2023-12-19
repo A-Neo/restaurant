@@ -1,0 +1,59 @@
+.gallery-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: -2.5px auto;
+    max-width: 1460px;
+}
+.gallery-list .gallery-item {
+    position: relative;
+    flex-grow: 1; /* Позволяет элементу расти, чтобы заполнить доступное пространство */
+    flex-shrink: 1; /* Позволяет элементу уменьшаться, если не хватает места */
+    flex-basis: calc(33.333% - 10px); /* Базовое значение для 3 элементов в строке */
+    min-height: 160px;
+    max-height: 360px;
+    overflow: hidden;
+}
+.gallery-list .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.gallery-list .gallery-item:hover img {
+    transform: scale(1.1);
+}
+.gallery-item.special-class {
+    /* Стили для элементов с особым классом */
+}
+/* Если в строке один элемент */
+.gallery-list.gallery-item:nth-child(1):nth-last-child(1) {
+    flex-basis: 100%;
+}
+/* Если в строке два элемента, соотношение 1/3 и 2/3 */
+.gallery-list.gallery-item:nth-child(1):nth-last-child(2),
+.gallery-list.gallery-item:nth-child(1):nth-last-child(2) ~ .gallery-item {
+    flex-basis: calc(33.333% - 10px);
+}
+.gallery-list.gallery-item:nth-child(2):nth-last-child(2) {
+    flex-basis: calc(66.666% - 10px);
+}
+
+/* Медиа-запросы для мобильных устройств, если требуется */
+@media (max-width: 767px) {
+    .gallery-list {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    .gallery-item {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+}
+
+
+
+
+
+

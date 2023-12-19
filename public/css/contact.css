@@ -1,0 +1,26 @@
+#contact .contact-wrap {
+    align-items: flex-start;
+}
+#contact .contact-wrap .contact-item {
+    height: auto;
+    min-height: 178px;
+}
+#contact .contact-wrap .contact-item h2 {
+    font-weight: 600;
+}
+#contact .contact-wrap .contact-item ul li {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: #333333;
+}
+#contact .contact-wrap .contact-item ul li span {
+    display: block;
+    background: none;
+}
+#contact .contact-wrap .contact-item ul li span a {
+    display: block;
+    background: none;
+}

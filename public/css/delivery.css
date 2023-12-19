@@ -1,0 +1,121 @@
+.street-popup {}
+.street-popup .street-popup__wrap {
+    min-width: 750px;
+    max-width: 750px;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    max-height: 95vh;
+    overflow: hidden;
+}
+
+.street-popup .street-popup__wrap .form_wrapper {
+    /*all: unset;*/
+    overflow-y: auto;
+}
+.form_wrapper::-webkit-scrollbar {
+    width: 1px;
+    border-radius: 1px;
+}
+
+.form_wrapper::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0); /* Полностью прозрачный */
+}
+.form_wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15); /* Полупрозрачный */
+}
+.form_maps {
+    height: 400px;
+    width: 100%;
+}
+.form_maps #map {
+    width: 100%;
+    height: 100%;
+}
+.street-popup__head {}
+.close-street {}
+.form_street {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.form_street__group input {
+    height: 52px;
+    width: 100%;
+    border: 0;
+}
+.form_street__input {
+    width: 73%;
+}
+.form_street__input input {
+    width: 100%;
+    background: #fbfbfb;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.form_street__sumbit {
+    width: 27%;
+}
+.form_street__sumbit input {
+    cursor: pointer;
+    width: 100%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: #fff;
+    background: #1d2123;
+    transition: all ease 0.3s;
+}
+.form_street__sumbit input:hover {
+    background: #fdc25c;
+}
+.form_text {}
+.form_maps {}
+.form_wrapper .street-btn {
+    margin: 13px 3px 25px;
+    font-size: 13px;
+    font-weight: 300;
+    color: #222222;
+    cursor: default;
+    opacity: 0.6;
+    line-height: 140%;
+}
+.street-btn a {
+    cursor: pointer;
+    color: #222222;
+}
+.street-popup .street-popup__wrap .street-popup__head h4 {
+    font-size: 28px;
+}
+.street-popup .street-popup__wrap .street-popup__head {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+}
+@media only screen and (max-width: 820px) {
+    .street-popup .street-popup__wrap {
+        min-width: 300px;
+        min-height: 300px;
+        max-height: 1300px;
+    }
+    .street-popup .street-popup__wrap .form_wrapper {
+        max-height: 1300px;
+    }
+    .form_street {
+        margin-top: 15px;
+    }
+    .form_street__group input {
+        height: 50px;
+    }
+    .form_maps {
+        height: 320px;
+    }
+    .form_street__input {
+        width: 68%;
+    }
+    .form_street__sumbit {
+        width: 32%;
+    }
+}

@@ -1,0 +1,187 @@
+.fieldset {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    column-gap: 18px;
+    border-radius: 6px;
+    overflow: hidden;
+    will-change: transform;
+    /* make shadows of inner elements visible */
+    padding: 6px;
+    margin: -6px;
+}
+.fieldset::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+}
+
+
+.box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    width: 55px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 6px 1px var(--shadow-color);
+    overflow: hidden;
+    will-change: transform;
+}
+.learn-form .learn-form__wrap form label.box {
+    margin: 0;
+}
+.box:focus-within {
+    box-shadow: 0 0 6px 1px var(--shadow-color), 0 0 0 2px var(--focus-color);
+}
+.box::before,
+.box::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+.box::before {
+    background: var(--bg-color);
+    z-index: var(--z-index-xs);
+    transition: background-color var(--transition-step-1);
+}
+.box::after {
+    transform: translateY(100%);
+    background-color: var(--success-color-desaturated);
+    opacity: 0;
+    z-index: var(--z-index-sm);
+    transition: transform var(--transition-step-1),
+    opacity var(--transition-step-1), background-color var(--transition-step-1);
+}
+
+.learn-form .learn-form__wrap form input.field {
+    position: relative;
+    outline: 0;
+    font-size: 25.21px;
+    line-height: 55px;
+    height: 55px;
+    color: #333;
+    background-color: transparent;
+    text-align: center;
+    z-index: 1;
+}
+.field::placeholder {
+    color: rgba(0,0,0,0.7);
+}
+
+
+.label-code {
+
+}
+.sms-phone__group {
+    margin: 55px 0 50px;
+}
+
+.sms-input-phone {
+    margin: 55px 0 25px;
+}
+
+.sms-phone__group.fieldset {
+
+}
+.modal-tabs form #formsms {}
+.modal-tabs form #formcode {}
+.modal-tabs form .sms-btn-group
+
+
+
+    /* animate-success styles  */
+
+.animate-success.fieldset {
+    padding: 0;
+    margin: 0;
+}
+.animate-success.fieldset::before {
+    background-color: var(--success-color);
+    transform: translateX(0);
+    transition: transform var(--transition-step-2);
+}
+
+.animate-success > .box {
+    box-shadow: none;
+    transition: transform var(--transition-step-3);
+}
+.animate-success > .box:nth-child(1) {
+    transform: translateX(24px);
+}
+.animate-success > .box:nth-child(2) {
+    transform: translateX(12px);
+}
+.animate-success > .box:nth-child(4) {
+    transform: translateX(-12px);
+}
+.animate-success > .box:nth-child(5) {
+    transform: translateX(-24px);
+}
+
+.animate-success > .box::before {
+    background-color: transparent;
+}
+.animate-success > .box::after {
+    background-color: var(--success-color);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.animate-success > .box > .field,
+.animate-success > .box > .field::placeholder {
+    color: var(--text-color-inversed);
+    transition: color var(--transition-step-1);
+}
+
+/* animate-failure styles  */
+
+.animate-failure.fieldset {
+    animation-name: shaking;
+    animation-duration: var(--transition-duration-step-2);
+    animation-timing-function: var(--easing);
+    animation-delay: var(--transition-delay-step-2);
+}
+
+.animate-failure > .box::before {
+    background-color: transparent;
+}
+.animate-failure > .box::after {
+    background-color: var(--failure-color);
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.animate-failure > .box > .field,
+.animate-failure > .box > .field::placeholder {
+    color: var(--text-color-inversed);
+    transition: color var(--transition-step-1);
+}
+
+@keyframes shaking {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25%,
+    75% {
+        transform: translateX(10px);
+    }
+
+    50% {
+        transform: translateX(-10px);
+    }
+}
+/* End SMS Code input styles */

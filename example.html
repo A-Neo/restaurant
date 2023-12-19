@@ -1,0 +1,57 @@
+<div class="gallery__container">
+    <div class="gallery__list">
+        @foreach($page->sliders as $image)
+        <div class="gallery__item" href="{{ $image->image_url }}" class="fancybox" data-fancybox="gallery" itemprop="contentUrl">
+            <img data-src="{{ $image->thumbnail_url }}" class="lazyload blur-up" itemprop="thumbnail" alt="Фото №{{ $image->id }}" />
+        </div>
+        @endforeach
+    </div>
+</div>
+<style>
+    .gallery__list {
+        width: 100%;
+        max-width: 1460px;
+        margin: 0 auto;
+        padding: 50px 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: minmax(250px, 1fr);
+        grid-auto-flow: dense;
+        grid-gap: 20px;
+    }
+
+    .gallery__list .gallery__item {
+        position: relative;
+        background-color: #d7d7d8;
+        overflow: hidden;
+    }
+
+    .gallery__list .gallery__item:nth-child(7n + 1) {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .gallery__list .gallery__item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+    }
+
+    .gallery__list .gallery__item:hover img {
+        transform: scale(1.1);
+    }
+
+    /* Let's make it responsive */
+    @media (max-width: 768px) {
+        .gallery__list {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 250px;
+        }
+
+        .gallery__list .gallery__item:nth-child(7n + 1) {
+            grid-column: unset;
+            grid-row: unset;
+        }
+    }
+</style>

@@ -1,0 +1,30 @@
+Food::create([
+    'title_ru' => 'Основное меню',
+    'title_en' => 'Main menu',
+    'subtitle_en' => 'Актуальные блюда из основного меню.',
+    'subtitle_ru' => 'Current dishes from the main menu.',
+    'image' => 'image/test.png',
+    'order' => 0,
+    'meta_title' => 'Заголовок - Основное меню',
+    'meta_description' => 'Описание - Основное меню',
+    'meta_keywords' => 'Ключи - Основное меню'
+]);
+
+Food::create([
+    'title_ru' => 'Сезонное меню',
+    'title_en' => 'Seasonal menu',
+    'subtitle_en' => 'Актуальные блюда из сезонное меню.',
+    'subtitle_ru' => 'Current dishes from the seasonal menu.',
+    'image' => 'image/test.png',
+    'order' => 1,
+    'meta_title' => 'Заголовок - Основное меню',
+    'meta_description' => 'Описание - Основное меню',
+    'meta_keywords' => 'Ключи - Основное меню'
+]);
+
+
+Грузинский ресторан
+Наслаждайтесь многообразием вкусов, дарите радость своим близким! А мы обеспечим высокое качество блюд и хороший сервис.
+
+Georgian restaurant
+Enjoy the variety of tastes, give joy to your loved ones! And we will provide high quality dishes and good service.

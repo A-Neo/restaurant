@@ -1,0 +1,45 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateBannersTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('banners', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('title_ru');
+            $table->string('title_en')->nullable();
+            $table->string('subtitle_ru')->nullable();
+            $table->string('subtitle_en')->nullable();
+            $table->string('btn_ru')->nullable();
+            $table->string('btn_en')->nullable();
+            $table->string('btn_link')->nullable();
+            $table->string('bg_image')->nullable();
+            $table->string('image')->nullable();
+            $table->string('video_link')->nullable();
+            $table->tinyInteger('mode_bg')->default(0);
+            $table->tinyInteger('mode_content')->default(0);
+            $table->tinyInteger('mode_align')->default(0);
+            $table->tinyInteger('order')->default(0);
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('banners');
+    }
+}

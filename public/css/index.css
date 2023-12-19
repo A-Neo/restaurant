@@ -1,0 +1,30 @@
+@media (max-width: 480px) {
+    #m-about {
+        margin: 35px 0;
+    }
+    #m-mobile .mobile-wrap .mobile-text .mobile-text__btns a:first-child {
+        margin-right: 0;
+    }
+    #m-mobile .mobile-wrap .mobile-text .mobile-text__btns a {
+        width: 185px;
+    }
+    #m-contact {
+        position: relative;
+        width: 100%;
+    }
+    #m-contact .contact-maps {
+        position: relative;
+        width: 100%;
+    }
+    #m-contact .contact-maps .contact-data {
+        position: relative;
+        width: 100%;
+    }
+    #m-contact .contact-maps #map {
+        position: relative;
+        width: 100%;
+    }
+    .ymaps-2-1-79-map {
+        width: 100% !important;
+    }
+}
