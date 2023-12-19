@@ -1,0 +1,38 @@
+<?php
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\MainController;
+use App\Http\Controllers\Admin\ProductController;
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
+    Route::get('/dashboard', [MainController::class, 'index'])->name('admin.index');
+    Route::resource('/banners', '\App\Http\Controllers\Admin\BannerController');
+    Route::resource('/abouts', '\App\Http\Controllers\Admin\Main\AboutController');
+    Route::resource('/additions', '\App\Http\Controllers\Admin\Main\AdditionController');
+    Route::resource('/reservations', '\App\Http\Controllers\Admin\Main\ReservationController');
+    Route::resource('/chefs', '\App\Http\Controllers\Admin\Main\ChefController');
+    Route::resource('/reviews', '\App\Http\Controllers\Admin\Main\ReviewController');
+    Route::resource('/settings', '\App\Http\Controllers\Admin\SettingController');
+    Route::resource('/foods', '\App\Http\Controllers\Admin\FoodController');
+    Route::resource('/beverages', '\App\Http\Controllers\Admin\BeverageController');
+    Route::get('/categories/type/{type?}', [CategoryController::class, 'type'])->name('categories.type');
+    Route::resource('/categories', '\App\Http\Controllers\Admin\CategoryController');
+    Route::get('/products/delivery', [ProductController::class, 'delivery'])->name('products.delivery');
+    Route::get('/products/images/{id}', [\App\Http\Controllers\Admin\ProductController::class, 'destoryImages'])->name('products.destroy.images');
+    Route::get('/products/search', [\App\Http\Controllers\Admin\ProductController::class, 'search'])->name('products.search');
+    Route::resource('/products', '\App\Http\Controllers\Admin\ProductController');
+    Route::resource('/rubrics', '\App\Http\Controllers\Admin\RubricController');
+    Route::post('/articles/slide/{id}', [ArticleController::class, 'deleteSlide'])->name('article.delete.slide');
+    Route::post('/articles/gallery/{id}', [ArticleController::class, 'deleteGallery'])->name('article.delete.gallery');
+    Route::resource('/articles', '\App\Http\Controllers\Admin\ArticleController');
+    Route::post('/pages/{page}/delete-slide', [\App\Http\Controllers\Admin\PageController::class, 'deleteSlide'])->name('pages.delete.slide');
+    Route::resource('/pages', '\App\Http\Controllers\Admin\PageController');
+    Route::resource('/callbacks', '\App\Http\Controllers\Admin\CallbackController');
+    Route::resource('/messages', '\App\Http\Controllers\Admin\MessageController');
+    Route::resource('/orders', '\App\Http\Controllers\Admin\OrderController');
+    Route::resource('/users', '\App\Http\Controllers\Admin\UserController');
+    Route::resource('/deliveries', '\App\Http\Controllers\Admin\DeliveryZoneController');
+    Route::resource('/algoritms', '\App\Http\Controllers\Admin\AlgoritmController');
+    Route::post('/banquets/slide/{id}', [\App\Http\Controllers\Admin\BanquetController::class, 'deleteSlide'])->name('banquet.delete.slide');
+    Route::resource('/banquets', '\App\Http\Controllers\Admin\BanquetController');
+});

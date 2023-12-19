@@ -1,0 +1,37 @@
+<?php
+
+return [
+    'order' => 'Ваш заказ',
+    'delivery' => 'Доставка',
+    'pickup' => 'Самовывоз',
+    'data_time' => 'Дата и время',
+    'data_courier' => 'Доставим курьером как можно скорее',
+    'value_data' => 'Дата',
+    'value_time' => 'Время',
+    'value_time_fast' => 'Как можно скорее',
+    'price_delivery' => 'Стоимость доставки',
+    'price_payment' => 'Сумма к оплате',
+    'value_payment' => 'Способ оплаты',
+    'payment_order' => 'Заказать',
+    'order_politic' => "Нажимая на кнопку «Заказать», я даю <a href='/personal'>Согласие на обработку персональных данных</a>, согласие с <a href='/policy'>политикой обработки и защиты персональных данных</a>, согласие с условиями <a href='/offers'>оферты</a>.",
+    'adrress_politic' => "Нажимая на кнопку «Сохранить», я даю <a href='/personal'>Согласие на обработку персональных данных</a>, согласие с <a href='/policy'>политикой обработки и защиты персональных данных</a>.",
+    'save_adrress' => 'Адрес доставки',
+    'add_adrress' => 'Добавить адрес',
+    'enter_data' => 'Введите данные',
+    'wishes_order' => 'Пожелания к заказу',
+    'devices_not' => 'Приборы не нужны',
+    'payment_restaurant' => 'Оплатить наличными',
+    'payment_card' => 'Оплатить картой онлайн',
+    'payment_pay' => 'Оплатить «Apple Pay» | «Google Pay» | «SberPay»',
+    'btn_save' => 'Сохранить',
+    'new_address' => 'Новый адрес',
+    'moscow' => 'Москва',
+    'street' => 'Улица',
+    'house' => 'Дом',
+    'flat' => 'Квартира',
+    'entrance' => 'Подъезд',
+    'intercom' => 'Домофон',
+    'floor' => 'Этаж',
+    'shipping_cost' => 'Стоимость доставки:', //Shipping cost
+    'discount' => 'Скидка:', // Discount
+];

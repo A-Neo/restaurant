@@ -1,0 +1,100 @@
+@media only screen and (min-width: 1460px) {
+    #order .grid {
+        -ms-grid-columns: 1420px;
+        grid-template-columns: 1420px;
+        -ms-grid-columns: 1fr 1420px 1fr;
+    }
+    #order .order-left {
+        width: 55%;
+    }
+    #order .order-right {
+        width: 43%;
+    }
+}
+
+.order-price-group {
+    display: flex;
+    align-items: center;
+}
+.order-price-group .price-current {
+    margin-left: 3px;
+}
+
+#order .order-right .order-block h4 {
+    font-weight: 600;
+}
+#order .order-right .order-block {
+    padding: 0;
+    margin-bottom: 10px;
+    border-bottom: 0;
+}
+.order-help-block {
+    padding: 25px 0;
+    border-bottom: 1px solid #cfcfcf;
+}
+.order-help-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.order-help-item:first-child {
+    margin-top: 0;
+}
+.order-help-item p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.order-help-item p .price-current {
+    margin-left: 3px;
+}
+#order .order-right .order-list .order-item {
+    align-items: flex-start;
+}
+#order .order-right .order-list .order-item .order-item__price {
+    padding-top: 5px;
+}
+#order .order-right .order-block {
+    margin: 25px 0;
+}
+#order .order-right .order-block h4 {
+    font-weight: 600;
+    font-size: 28px;
+}
+#order .order-right .order-block span {
+    font-size: 24px;
+}
+.form_street_down {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+.form_street_down input {
+    width: 24%;
+    height: 52px;
+    background: #fbfbfb;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    border: 0;
+}
+@media only screen and (max-width: 620px) {
+    .form_street_down {
+        margin-top: 2%;
+        flex-wrap: wrap;
+    }
+    .form_street_down input {
+        width: 49%;
+        height: 50px;
+        background: #fbfbfb;
+        padding-left: 20px;
+        font-size: 14px;
+        font-weight: 400;
+        border: 0;
+    }
+    .form_street_down input:nth-child(3), .form_street_down input:nth-child(4) {
+        margin-top: 2%;
+    }
+}

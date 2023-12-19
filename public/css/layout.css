@@ -1,0 +1,3 @@
+#delivery .delivery-wrap .delivery-list .delivery-item .delivery-item__img:hover .delivery-overlay {
+    display: none !important;
+}
